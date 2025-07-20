@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VTU LIFE - Courses</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>VTU LIFE</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Courses</h2>
+    <ul class="course-list">
+      <li><a href="#">1st Semester - Engineering Physics</a></li>
+      <li><a href="#">2nd Semester - C Programming</a></li>
+      <li><a href="#">3rd Semester - Data Structures</a></li>
+    </ul>
+  </main>
+
+  <footer>
+    <p>© 2025 VTU LIFE. All rights reserved.</p>
+  </footer>
+</body>
+</html>

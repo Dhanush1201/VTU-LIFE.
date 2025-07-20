@@ -2,9 +2,10 @@ VTU-LIFE/
 ├── index.html
 ├── style.css
 ├── notes/
-│   ├── cse-notes.pdf
-│   └── ece-notes.pdf
+│   ├── physics-notes.pdf
+│   └── chemistry-notes.pdf
 ├── question-papers/
-│   ├── cse-2023.pdf
-│   └── ece-2022.pdf
+│   ├── physics-2023.pdf
+│   └── chemistry-2022.pdf
 └── README.md
+

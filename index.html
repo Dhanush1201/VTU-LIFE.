@@ -20,14 +20,14 @@
         📘 Physics Cycle <span id="arrow-physics" class="arrow">&#9654;</span>
       </h2>
       <ul id="physicsList" class="subject-list hidden">
-        <li onclick="showPDF('applied_physics.pdf')">Applied Physics</li>
-        <li onclick="showPDF('maths_1.pdf')">Mathematics-1</li>
-        <li onclick="showPDF('mechanical_intro.pdf')">Introduction to Mechanical Engineering</li>
-        <li onclick="showPDF('iot_intro.pdf')">Introduction to IoT</li>
-        <li onclick="showPDF('c_programming.pdf')">Programming in C</li>
-        <li onclick="showPDF('design_thinking.pdf')">Innovation & Design Thinking</li>
-        <li onclick="showPDF('english_comm.pdf')">Communicative English</li>
-        <li onclick="showPDF('kannada.pdf')">Samsruthika Kannada</li>
+        <li><a href="papers/applied_physics.pdf" target="_blank">Applied Physics</a></li>
+        <li><a href="papers/maths_1.pdf" target="_blank">Mathematics-1</a></li>
+        <li><a href="papers/mechanical_intro.pdf" target="_blank">Introduction to Mechanical Engineering</a></li>
+        <li><a href="papers/iot_intro.pdf" target="_blank">Introduction to IoT</a></li>
+        <li><a href="papers/c_programming.pdf" target="_blank">Programming in C</a></li>
+        <li><a href="papers/design_thinking.pdf" target="_blank">Innovation & Design Thinking</a></li>
+        <li><a href="papers/english_comm.pdf" target="_blank">Communicative English</a></li>
+        <li><a href="papers/kannada.pdf" target="_blank">Samsruthika Kannada</a></li>
       </ul>
     </section>
 
@@ -37,23 +37,16 @@
         📕 Chemistry Cycle <span id="arrow-chemistry" class="arrow">&#9654;</span>
       </h2>
       <ul id="chemistryList" class="subject-list hidden">
-        <li onclick="showPDF('applied_chemistry.pdf')">Applied Chemistry</li>
-        <li onclick="showPDF('maths_2.pdf')">Mathematics-2</li>
-        <li onclick="showPDF('electronics.pdf')">Intro to Electronics & Communication</li>
-        <li onclick="showPDF('cpp.pdf')">Intro to C++ Programming</li>
-        <li onclick="showPDF('python.pdf')">Intro to Python Programming</li>
-        <li onclick="showPDF('caed.pdf')">CAE Drawing</li>
-        <li onclick="showPDF('health.pdf')">Health Foundation</li>
-        <li onclick="showPDF('english.pdf')">English Writing Skills</li>
-        <li onclick="showPDF('constitution.pdf')">Indian Constitution</li>
+        <li><a href="papers/applied_chemistry.pdf" target="_blank">Applied Chemistry</a></li>
+        <li><a href="papers/maths_2.pdf" target="_blank">Mathematics-2</a></li>
+        <li><a href="papers/electronics.pdf" target="_blank">Intro to Electronics & Communication</a></li>
+        <li><a href="papers/cpp.pdf" target="_blank">Intro to C++ Programming</a></li>
+        <li><a href="papers/python.pdf" target="_blank">Intro to Python Programming</a></li>
+        <li><a href="papers/caed.pdf" target="_blank">CAE Drawing</a></li>
+        <li><a href="papers/health.pdf" target="_blank">Health Foundation</a></li>
+        <li><a href="papers/english.pdf" target="_blank">English Writing Skills</a></li>
+        <li><a href="papers/constitution.pdf" target="_blank">Indian Constitution</a></li>
       </ul>
-    </section>
-
-    <!-- PDF Viewer -->
-    <section id="pdfViewer" class="card hidden">
-      <h3>📄 Selected File:</h3>
-      <iframe id="pdfFrame" src="" width="100%" height="500px"></iframe>
-      <a id="downloadBtn" href="#" download class="download-link" target="_blank">⬇️ Download PDF</a>
     </section>
 
   </main>
@@ -68,13 +61,6 @@
       const arrow = document.getElementById("arrow-" + id.replace("List", ""));
       list.classList.toggle("hidden");
       arrow.classList.toggle("rotate");
-    }
-
-    function showPDF(filename) {
-      const filePath = "papers/" + filename;
-      document.getElementById("pdfFrame").src = filePath;
-      document.getElementById("downloadBtn").href = filePath;
-      document.getElementById("pdfViewer").classList.remove("hidden");
     }
   </script>
 </body>

@@ -1,15 +1,13 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-image: url('https://images.unsplash.com/photo-1584697964154-bccf1f2efba9');
+  background: url('https://images.unsplash.com/photo-1584697964154-bccf1f2efba9') no-repeat center center fixed;
   background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
   color: #333;
 }
 
 header {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
   color: white;
   padding: 1.5rem;
   text-align: center;
@@ -22,17 +20,17 @@ header {
 }
 
 .card {
-  background-color: rgba(255, 255, 255, 0.92);
+  background-color: rgba(255, 255, 255, 0.94);
   padding: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   border-radius: 15px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
 }
 
 .card h2 {
+  cursor: pointer;
   display: flex;
   justify-content: space-between;
-  cursor: pointer;
   font-size: 1.3rem;
 }
 
@@ -44,25 +42,29 @@ header {
 
 .subject-list li {
   cursor: pointer;
-  padding: 5px 0;
   color: #0077cc;
+  margin: 6px 0;
 }
 
 .subject-list li:hover {
   text-decoration: underline;
 }
 
+.download-link {
+  display: inline-block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #0066cc;
+}
+
 .hidden {
   display: none;
 }
 
-.rotate {
-  transform: rotate(90deg);
+.arrow {
+  transition: transform 0.2s ease-in-out;
 }
 
-.download-link {
-  display: inline-block;
-  margin-top: 10px;
-  font-weight: bold;
-  color: #0066cc;
+.rotate {
+  transform: rotate(90deg);
 }

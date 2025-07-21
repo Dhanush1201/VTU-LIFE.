@@ -2,10 +2,10 @@ VTU-LIFE/
 ├── index.html
 ├── style.css
 ├── notes/
-│   ├── physics-notes.pdf
-│   └── chemistry-notes.pdf
+│   ├── physics-cycle.pdf
+│   └── chemistry-cycle.pdf
 ├── question-papers/
-│   ├── physics-2023.pdf
-│   └── chemistry-2022.pdf
+│   ├── physics-cycle.pdf
+│   └── chemistry-cycle.pdf
 └── README.md
 

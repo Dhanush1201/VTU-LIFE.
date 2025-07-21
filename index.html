@@ -1,86 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VTU Life</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VTU LIFE</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-100 font-sans">
-
-  <!-- Header -->
-  <header class="bg-gray-900 text-white text-center py-6 shadow-md">
-    <h1 class="text-3xl font-bold">VTU LIFE</h1>
-    <p class="text-sm mt-1">Your Gateway to VTU Notes and Question Papers</p>
+<body>
+  <header>
+    <h1>VTU LIFE</h1>
+    <p>Your Gateway to VTU Notes and Question Papers</p>
   </header>
 
-  <!-- Main Content -->
-  <main class="p-6 max-w-4xl mx-auto">
-
+  <main>
     <!-- Physics Cycle -->
-    <div class="p-4 bg-white rounded-xl shadow-md mb-4">
-      <button onclick="toggleSubjects('physics')" class="flex items-center text-blue-700 font-bold text-lg">
-        📘 Physics Cycle
-        <span id="arrow-physics" class="ml-2 transform transition-transform">&#9654;</span>
-      </button>
-      <ul id="subjects-physics" class="mt-2 ml-4 hidden list-disc text-sm text-gray-700">
-        <li>Applied Physics for CSE Stream</li>
-        <li>Mathematics-1 for CSE Stream</li>
-        <li>Introduction to Mechanical Engineering</li>
-        <li>Introduction to Internet of Things</li>
-        <li>Principle of Programming using C</li>
-        <li>Innovation and Design Thinking</li>
-        <li>Communicative English</li>
-        <li>Samsruthika Kannada</li>
+    <section class="card">
+      <h2 onclick="toggleList('physicsSubjects')">📘 Physics Cycle <span class="arrow">🔽</span></h2>
+      <ul id="physicsSubjects" class="subject-list">
+        <li><strong>Applied Physics</strong> - <a href="#">Download Notes</a></li>
+        <li><strong>Mathematics-1</strong> - <a href="#">Download Notes</a></li>
+        <li><strong>Intro to Mechanical Engineering</strong> - <a href="#">Download Notes</a></li>
+        <li><strong>Intro to IoT</strong> - <a href="#">Download Notes</a></li>
+        <li><strong>Programming in C</strong> - <a href="#">Download Notes</a></li>
+        <li><strong>Innovation & Design Thinking</strong> - <a href="#">Download Notes</a></li>
+        <li><strong>Communicative English</strong> - <a href="#">Download Notes</a></li>
+        <li><strong>Samsruthika Kannada</strong> - <a href="#">Download Notes</a></li>
       </ul>
-    </div>
+    </section>
 
     <!-- Chemistry Cycle -->
-    <div class="p-4 bg-white rounded-xl shadow-md mb-4">
-      <button onclick="toggleSubjects('chemistry')" class="flex items-center text-blue-700 font-bold text-lg">
-        📙 Chemistry Cycle
-        <span id="arrow-chemistry" class="ml-2 transform transition-transform">&#9654;</span>
-      </button>
-      <ul id="subjects-chemistry" class="mt-2 ml-4 hidden list-disc text-sm text-gray-700">
-        <li>Applied Chemistry for CSE Stream</li>
-        <li>Mathematics-2 for CSE Stream</li>
-        <li>Introduction to Electronics & Communication</li>
-        <li>Introduction to C++ Programming</li>
-        <li>Introduction to Python Programming</li>
-        <li>Computer Aided Engineering Drawing</li>
-        <li>Scientific Foundation of Health</li>
-        <li>Professional Writing Skills in English</li>
-        <li>Indian Constitution</li>
+    <section class="card">
+      <h2 onclick="toggleList('chemistrySubjects')">📕 Chemistry Cycle <span class="arrow">🔽</span></h2>
+      <ul id="chemistrySubjects" class="subject-list">
+        <li><strong>Applied Chemistry</strong> - <a href="#">Download Notes</a></li>
+        <li><strong>Mathematics-2</strong> - <a href="#">Download Notes</a></li>
+        <li><strong>Intro to Electronics & Communication</strong> - <a href="#">Download Notes</a></li>
+        <li><strong>Intro to C++ Programming</strong> - <a href="#">Download Notes</a></li>
+        <li><strong>Intro to Python Programming</strong> - <a href="#">Download Notes</a></li>
+        <li><strong>CAE Drawing</strong> - <a href="#">Download Notes</a></li>
+        <li><strong>Health Foundation</strong> - <a href="#">Download Notes</a></li>
+        <li><strong>English Writing Skills</strong> - <a href="#">Download Notes</a></li>
+        <li><strong>Indian Constitution</strong> - <a href="#">Download Notes</a></li>
       </ul>
-    </div>
-
-    <!-- Question Papers -->
-    <div class="p-4 bg-white rounded-xl shadow-md mb-4">
-      <h2 class="text-lg font-bold text-red-600">📝 Question Papers</h2>
-      <ul class="ml-4 list-disc text-sm text-gray-700 mt-2">
-        <li>Physics - 2023</li>
-        <li>Chemistry - 2022</li>
-      </ul>
-    </div>
-
+    </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="text-center text-sm py-4 text-gray-600 bg-gray-100">
-    © 2025 VTU LIFE. For educational use only.
+  <footer>
+    &copy; 2025 VTU LIFE. For educational use only.
   </footer>
 
-  <!-- Toggle Script -->
   <script>
-    function toggleSubjects(cycle) {
-      const list = document.getElementById(`subjects-${cycle}`);
-      const arrow = document.getElementById(`arrow-${cycle}`);
-      list.classList.toggle('hidden');
-      arrow.classList.toggle('rotate-90');
+    function toggleList(id) {
+      const list = document.getElementById(id);
+      list.classList.toggle('active');
     }
   </script>
 </body>
 </html>
-
-

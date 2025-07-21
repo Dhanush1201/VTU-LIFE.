@@ -1,8 +1,80 @@
-/* style.css */
 body {
-  transition: background-color 0.2s ease-in-out;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url('https://images.unsplash.com/photo-1584697964188-c12a57744b5d'); /* Educational background */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: #fff;
 }
 
-.rotate-90 {
-  transform: rotate(90deg);
+header {
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header p {
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+main {
+  padding: 30px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 15px;
+  color: #333;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.subject-list {
+  display: none;
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.subject-list.active {
+  display: block;
+}
+
+.subject-list li {
+  margin: 8px 0;
+}
+
+.subject-list a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.subject-list a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  padding: 15px;
+  margin-top: 50px;
+  font-size: 0.9rem;
 }

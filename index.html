@@ -20,8 +20,14 @@
         📘 Physics Cycle <span id="arrow-physics" class="arrow">&#9654;</span>
       </h2>
       <ul id="physicsList" class="subject-list hidden">
-        <li onclick="showPDF('BMATS101set1.pdf')">Mathematics-1</li>
         <li onclick="showPDF('applied_physics.pdf')">Applied Physics</li>
+        <li onclick="showPDF('maths_1.pdf')">Mathematics-1</li>
+        <li onclick="showPDF('mechanical_intro.pdf')">Introduction to Mechanical Engineering</li>
+        <li onclick="showPDF('iot_intro.pdf')">Introduction to IoT</li>
+        <li onclick="showPDF('c_programming.pdf')">Programming in C</li>
+        <li onclick="showPDF('design_thinking.pdf')">Innovation & Design Thinking</li>
+        <li onclick="showPDF('english_comm.pdf')">Communicative English</li>
+        <li onclick="showPDF('kannada.pdf')">Samsruthika Kannada</li>
       </ul>
     </section>
 
@@ -31,8 +37,15 @@
         📕 Chemistry Cycle <span id="arrow-chemistry" class="arrow">&#9654;</span>
       </h2>
       <ul id="chemistryList" class="subject-list hidden">
-        <li onclick="showPDF('maths_2.pdf')">Mathematics-2</li>
         <li onclick="showPDF('applied_chemistry.pdf')">Applied Chemistry</li>
+        <li onclick="showPDF('maths_2.pdf')">Mathematics-2</li>
+        <li onclick="showPDF('electronics.pdf')">Intro to Electronics & Communication</li>
+        <li onclick="showPDF('cpp.pdf')">Intro to C++ Programming</li>
+        <li onclick="showPDF('python.pdf')">Intro to Python Programming</li>
+        <li onclick="showPDF('caed.pdf')">CAE Drawing</li>
+        <li onclick="showPDF('health.pdf')">Health Foundation</li>
+        <li onclick="showPDF('english.pdf')">English Writing Skills</li>
+        <li onclick="showPDF('constitution.pdf')">Indian Constitution</li>
       </ul>
     </section>
 
@@ -52,21 +65,16 @@
   <script>
     function toggleList(id) {
       const list = document.getElementById(id);
-      const arrow = document.getElementById('arrow-' + id.replace('List', ''));
-      list.classList.toggle('hidden');
-      arrow.classList.toggle('rotate');
+      const arrow = document.getElementById("arrow-" + id.replace("List", ""));
+      list.classList.toggle("hidden");
+      arrow.classList.toggle("rotate");
     }
 
-    function showPDF(fileName) {
-      const viewer = document.getElementById('pdfViewer');
-      const frame = document.getElementById('pdfFrame');
-      const download = document.getElementById('downloadBtn');
-
-      const filePath = 'papers/' + fileName;
-
-      frame.src = filePath;
-      download.href = filePath;
-      viewer.classList.remove('hidden');
+    function showPDF(filename) {
+      const filePath = "papers/" + filename;
+      document.getElementById("pdfFrame").src = filePath;
+      document.getElementById("downloadBtn").href = filePath;
+      document.getElementById("pdfViewer").classList.remove("hidden");
     }
   </script>
 </body>

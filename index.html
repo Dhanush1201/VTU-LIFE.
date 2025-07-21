@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>VTU LIFE</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
@@ -12,15 +12,16 @@
     <p>Your Gateway to VTU Notes and Question Papers</p>
   </header>
 
-  <main>
+  <main class="container">
+
     <!-- Physics Cycle -->
     <section class="card">
-      <h2 onclick="toggleList('physicsSubjects')">📘 Physics Cycle <span class="arrow">🔽</span></h2>
+      <h2 onclick="toggleList('physicsSubjects')">📘 Physics Cycle <span class="arrow">⬇️</span></h2>
       <ul id="physicsSubjects" class="subject-list">
         <li><strong>Applied Physics</strong> - <a href="#">Download Notes</a></li>
         <li><strong>Mathematics-1</strong> - <a href="#">Download Notes</a></li>
-        <li><strong>Intro to Mechanical Engineering</strong> - <a href="#">Download Notes</a></li>
-        <li><strong>Intro to IoT</strong> - <a href="#">Download Notes</a></li>
+        <li><strong>Introduction to Mechanical Engineering</strong> - <a href="#">Download Notes</a></li>
+        <li><strong>Introduction to IoT</strong> - <a href="#">Download Notes</a></li>
         <li><strong>Programming in C</strong> - <a href="#">Download Notes</a></li>
         <li><strong>Innovation & Design Thinking</strong> - <a href="#">Download Notes</a></li>
         <li><strong>Communicative English</strong> - <a href="#">Download Notes</a></li>
@@ -30,7 +31,7 @@
 
     <!-- Chemistry Cycle -->
     <section class="card">
-      <h2 onclick="toggleList('chemistrySubjects')">📕 Chemistry Cycle <span class="arrow">🔽</span></h2>
+      <h2 onclick="toggleList('chemistrySubjects')">📕 Chemistry Cycle <span class="arrow">⬇️</span></h2>
       <ul id="chemistrySubjects" class="subject-list">
         <li><strong>Applied Chemistry</strong> - <a href="#">Download Notes</a></li>
         <li><strong>Mathematics-2</strong> - <a href="#">Download Notes</a></li>
@@ -43,16 +44,29 @@
         <li><strong>Indian Constitution</strong> - <a href="#">Download Notes</a></li>
       </ul>
     </section>
+
+    <!-- Model Question Paper Section -->
+    <section class="card">
+      <h2>📄 Model Question Papers</h2>
+      <ul>
+        <li>
+          <strong>Mathematics-I (BMATS101) – Set 1:</strong>
+          <a href="papers/BMATS101set1.pdf" download>Download PDF</a>
+        </li>
+      </ul>
+    </section>
+
   </main>
 
   <footer>
-    &copy; 2025 VTU LIFE. For educational use only.
+    © 2025 VTU LIFE. For educational use only.
   </footer>
 
+  <!-- JavaScript for toggling -->
   <script>
     function toggleList(id) {
       const list = document.getElementById(id);
-      list.classList.toggle('active');
+      list.classList.toggle("active");
     }
   </script>
 </body>

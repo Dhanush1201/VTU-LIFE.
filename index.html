@@ -16,44 +16,31 @@
 
     <!-- Physics Cycle -->
     <section class="card">
-      <h2 onclick="toggleList('physicsSubjects')">📘 Physics Cycle <span class="arrow">⬇️</span></h2>
-      <ul id="physicsSubjects" class="subject-list">
-        <li><strong>Applied Physics</strong> - <a href="#">Download Notes</a></li>
-        <li><strong>Mathematics-1</strong> - <a href="#">Download Notes</a></li>
-        <li><strong>Introduction to Mechanical Engineering</strong> - <a href="#">Download Notes</a></li>
-        <li><strong>Introduction to IoT</strong> - <a href="#">Download Notes</a></li>
-        <li><strong>Programming in C</strong> - <a href="#">Download Notes</a></li>
-        <li><strong>Innovation & Design Thinking</strong> - <a href="#">Download Notes</a></li>
-        <li><strong>Communicative English</strong> - <a href="#">Download Notes</a></li>
-        <li><strong>Samsruthika Kannada</strong> - <a href="#">Download Notes</a></li>
+      <h2 onclick="toggleList('physicsList')">
+        📘 Physics Cycle <span id="arrow-physics" class="arrow">&#9654;</span>
+      </h2>
+      <ul id="physicsList" class="subject-list hidden">
+        <li onclick="showPDF('BMATS101set1.pdf')">Mathematics-1</li>
+        <li onclick="showPDF('applied_physics.pdf')">Applied Physics</li>
       </ul>
     </section>
 
     <!-- Chemistry Cycle -->
     <section class="card">
-      <h2 onclick="toggleList('chemistrySubjects')">📕 Chemistry Cycle <span class="arrow">⬇️</span></h2>
-      <ul id="chemistrySubjects" class="subject-list">
-        <li><strong>Applied Chemistry</strong> - <a href="#">Download Notes</a></li>
-        <li><strong>Mathematics-2</strong> - <a href="#">Download Notes</a></li>
-        <li><strong>Intro to Electronics & Communication</strong> - <a href="#">Download Notes</a></li>
-        <li><strong>Intro to C++ Programming</strong> - <a href="#">Download Notes</a></li>
-        <li><strong>Intro to Python Programming</strong> - <a href="#">Download Notes</a></li>
-        <li><strong>CAE Drawing</strong> - <a href="#">Download Notes</a></li>
-        <li><strong>Health Foundation</strong> - <a href="#">Download Notes</a></li>
-        <li><strong>English Writing Skills</strong> - <a href="#">Download Notes</a></li>
-        <li><strong>Indian Constitution</strong> - <a href="#">Download Notes</a></li>
+      <h2 onclick="toggleList('chemistryList')">
+        📕 Chemistry Cycle <span id="arrow-chemistry" class="arrow">&#9654;</span>
+      </h2>
+      <ul id="chemistryList" class="subject-list hidden">
+        <li onclick="showPDF('maths_2.pdf')">Mathematics-2</li>
+        <li onclick="showPDF('applied_chemistry.pdf')">Applied Chemistry</li>
       </ul>
     </section>
 
-    <!-- Model Question Paper Section -->
-    <section class="card">
-      <h2>📄 Model Question Papers</h2>
-      <ul>
-        <li>
-          <strong>Mathematics-I (BMATS101) – Set 1:</strong>
-          <a href="papers/BMATS101set1.pdf" download>Download PDF</a>
-        </li>
-      </ul>
+    <!-- PDF Viewer -->
+    <section id="pdfViewer" class="card hidden">
+      <h3>📄 Selected File:</h3>
+      <iframe id="pdfFrame" src="" width="100%" height="500px"></iframe>
+      <a id="downloadBtn" href="#" download class="download-link" target="_blank">⬇️ Download PDF</a>
     </section>
 
   </main>
@@ -62,11 +49,24 @@
     © 2025 VTU LIFE. For educational use only.
   </footer>
 
-  <!-- JavaScript for toggling -->
   <script>
     function toggleList(id) {
       const list = document.getElementById(id);
-      list.classList.toggle("active");
+      const arrow = document.getElementById('arrow-' + id.replace('List', ''));
+      list.classList.toggle('hidden');
+      arrow.classList.toggle('rotate');
+    }
+
+    function showPDF(fileName) {
+      const viewer = document.getElementById('pdfViewer');
+      const frame = document.getElementById('pdfFrame');
+      const download = document.getElementById('downloadBtn');
+
+      const filePath = 'papers/' + fileName;
+
+      frame.src = filePath;
+      download.href = filePath;
+      viewer.classList.remove('hidden');
     }
   </script>
 </body>
